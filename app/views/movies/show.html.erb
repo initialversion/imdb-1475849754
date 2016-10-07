@@ -32,3 +32,43 @@
     </div>
   </div>
 </div>
+
+<!-- A Movie has many castings -->
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Castings
+      </li>
+
+      <% @movie.castings.each do |casting| %>
+        <li class="list-group-item">
+          <a href="/castings/<%= casting.id %>">
+            <%= casting.title %>
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<!-- A Movie has many actors -->
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Actors
+      </li>
+
+      <% @movie.actors.each do |actor| %>
+        <li class="list-group-item">
+          <a href="/actors/<%= actor.id %>">
+            <%= actor.title %>
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

@@ -23,3 +23,23 @@
     </div>
   </div>
 </div>
+
+<!-- A Director has many movies -->
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Movies
+      </li>
+
+      <% @director.movies.each do |movie| %>
+        <li class="list-group-item">
+          <a href="/movies/<%= movie.id %>">
+            <%= movie.name %>
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
