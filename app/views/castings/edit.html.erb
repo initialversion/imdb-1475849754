@@ -33,7 +33,7 @@
           Film
         </label>
 
-        <input type="text" id="film_id" name="film_id" placeholder="Film" class="form-control" value="<%= @casting.film_id %>">
+        <%= select_tag(:film_id, options_from_collection_for_select(Movie.all, :id, :title, @casting.film_id), :class => "form-control") %>
       </div>
 
       <button class="btn btn-warning">
